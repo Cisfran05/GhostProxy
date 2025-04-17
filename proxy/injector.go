@@ -1,4 +1,4 @@
-package injector
+package proxy
 
 import (
 	"bytes"
